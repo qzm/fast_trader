@@ -153,7 +153,7 @@ bool EventHandler::start_threads()
 // 执行策略事件
 void EventHandler::strategy_event_process()
 {
-    std::shared_ptr<StrategyEvent> strategy_event;
+    std::shared_ptr<Event> strategy_event;
     while (true) {
         if (strategy_event_queue.wait_dequeue(strategy_event)) {
             for (auto* sm : strategy_manager_vector) {
@@ -166,7 +166,7 @@ void EventHandler::strategy_event_process()
 // 执行框架事件
 void EventHandler::framework_event_process()
 {
-    std::shared_ptr<FrameworkEvent> framework_event;
+    std::shared_ptr<Event> framework_event;
     while (true) {
         if (framework_event_queue.wait_dequeue(framework_event)) {
             auto event = framework_event.get();

@@ -11,7 +11,7 @@ public:
     bool is_ready = false;
 
     CThostFtdcTraderApi* trader_api;
-    Queue<std::shared_ptr<StrategyEvent>>& strategy_event_queue;
+    Queue<std::shared_ptr<Event>>& strategy_event_queue;
 
     std::string app_id;
     std::string user_id;
@@ -20,7 +20,7 @@ public:
     std::string front_addr;
 
 public:
-    TraderSpi(json& config, CThostFtdcTraderApi* trader_api, Queue<std::shared_ptr<StrategyEvent>>& strategy_event_queue)
+    TraderSpi(json& config, CThostFtdcTraderApi* trader_api, Queue<std::shared_ptr<Event>>& strategy_event_queue)
         : config(config)
         , trader_api(trader_api)
         , strategy_event_queue(strategy_event_queue)

@@ -16,8 +16,8 @@ private:
 public:
     std::vector<StrategyManager*> strategy_manager_vector;
 
-    Queue<std::shared_ptr<StrategyEvent>> strategy_event_queue;
-    Queue<std::shared_ptr<FrameworkEvent>> framework_event_queue;
+    Queue<std::shared_ptr<Event>> strategy_event_queue;
+    Queue<std::shared_ptr<Event>> framework_event_queue;
 
     std::thread strategy_event_thread;
     std::thread framework_event_thread;

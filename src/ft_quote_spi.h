@@ -11,7 +11,7 @@ public:
     bool is_ready = false;
 
     CThostFtdcMdApi* quote_api;
-    Queue<std::shared_ptr<StrategyEvent>>& strategy_event_queue;
+    Queue<std::shared_ptr<Event>>& strategy_event_queue;
 
     std::string user_id;
     std::string password;
@@ -19,7 +19,7 @@ public:
     std::string front_addr;
 
 public:
-    QuoteSpi(json& config, CThostFtdcMdApi* quote_api, Queue<std::shared_ptr<StrategyEvent>>& strategy_event_queue)
+    QuoteSpi(json& config, CThostFtdcMdApi* quote_api, Queue<std::shared_ptr<Event>>& strategy_event_queue)
         : config(config)
         , quote_api(quote_api)
         , strategy_event_queue(strategy_event_queue)
