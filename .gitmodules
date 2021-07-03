@@ -1,0 +1,9 @@
+[submodule "lib/readerwriterqueue"]
+	path = lib/readerwriterqueue
+	url = git@github.com:cameron314/readerwriterqueue.git
+[submodule "lib/spdlog"]
+	path = lib/spdlog
+	url = git@github.com:gabime/spdlog.git
+[submodule "lib/cxxopts"]
+	path = lib/cxxopts
+	url = git@github.com:jarro2783/cxxopts.git
